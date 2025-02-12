@@ -2,10 +2,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the CSV data into a pandas DataFrame
-df = pd.read_csv("results.csv")
+df = pd.read_csv("res.csv")
 
 # Filter data for the specific page size (e.g., 1000)
-page_size = 1000
+page_size = 5000
 page_data = df[df["Page Size"] == page_size]
 
 # Filter data for each approach

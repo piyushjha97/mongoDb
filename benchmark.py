@@ -10,8 +10,8 @@ def benchmark_skiplimit(count, page_size):
 
     while items_fetched < count:  # Stop when all items are fetched
         start_time = time.time()
-     #   for _ in range(run_count):
-        data = fetch.skiplimit(page_size, page_number)
+        for _ in range(run_count):
+            data = fetch.skiplimit(page_size, page_number)
         end_time = time.time()
 
         if not data:  # No more data to fetch
@@ -98,8 +98,8 @@ if __name__ == '__main__':
         file.write(header + "\n")
 
         # Define the dataset sizes and page sizes to test
-        dataset_sizes = list(range(1000, 204020, 4000))  # Dataset sizes: 1000 to 200000 with an increment of 5000
-        page_sizes = [1000]  # Page sizes: 500, 1000, 2000, 5000
+        dataset_sizes = list(range(10000, 1000000, 50000))  # Dataset sizes: 1000 to 200000 with an increment of 5000
+        page_sizes = [5000]  # Page sizes: 500, 1000, 2000, 5000
 
         # Benchmark for each combination of dataset size and page size
         for count in dataset_sizes:

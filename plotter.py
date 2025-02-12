@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the CSV data into a pandas DataFrame
-df = pd.read_csv("results_0.csv")
+df = pd.read_csv("results.csv")
 
 # Function to plot the performance metrics
 def plot_metrics(df, metric, title):

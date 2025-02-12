@@ -18,7 +18,7 @@ fake = Faker()
 # Thread-safe unique ID generator
 class UniqueIDGenerator:
     def __init__(self):
-        self.counter = 3000022
+        self.counter = 56543235
         self.lock = threading.Lock()
 
     def get_next_id(self):
@@ -82,8 +82,8 @@ def main():
     collection = db[COLLECTION_NAME]
 
     # Configuration
-    total_documents = 1_00_000 # Total number of documents to insert (10 million)
-    num_threads = 5  # Number of threads to use for insertion
+    total_documents = 1_000_000 # Total number of documents to insert (10 million)
+    num_threads = 10  # Number of threads to use for insertion
 
     # Start timer
     start_time = time.time()
